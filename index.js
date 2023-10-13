@@ -26,12 +26,12 @@ app.use('/user', userRoutes);
 app.use('/noti', notiRoutes);
 
 const CONNECTION_URL = process.env.MONGODB_URL;
-const PORT = process.env.port || 5000;
+const PORT = process.env.PORT || 5000;
 
 //serving the front-end
 app.use(express.static(path.join(__dirname, './client/build')));
 
-app.get("*", (req,res) => {
+app.get("*", (_,res) => {
     res.sendFile(
         path.join(__dirname, './client/build/index.html'),
         function(err)
