@@ -29,17 +29,16 @@ const CONNECTION_URL = process.env.MONGODB_URL;
 const PORT = process.env.PORT || 5000;
 
 //serving the front-end
-app.use(express.static(path.join(__dirname, './client/build')));
 
-app.get("*", (_,res) => {
-    res.sendFile(
-        path.join(__dirname, './client/build/index.html'),
-        function(err)
-        {
-            res.status(500).send(err)
-        }
-    )
-})
+app.use(express.static(path.join(__dirname, "./client/build")));
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "./client/build/index.html"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
+});
 
 mongoose.connect(CONNECTION_URL, {useNewUrlParser : true, useUnifiedTopology : true} )
     .then(()=>app.listen(PORT, () => console.log(`Server running on port : ${PORT}`)))
