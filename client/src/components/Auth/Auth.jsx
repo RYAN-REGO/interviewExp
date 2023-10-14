@@ -34,7 +34,6 @@ const Auth = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
 
     try {
       //textfields validation

@@ -23,7 +23,6 @@ const Notifications = ({display}) => {
     },[])
     const notices = useSelector((state) => state.notices.noticeList)
     const {isLoading} = useSelector((state) => state.notices)
-    console.log(notices);
     return(
         <div className='noti_container'>
             <div className="noti_header">NOTIFICATIONS</div>

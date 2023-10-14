@@ -17,9 +17,7 @@
   letter-spacing: 2px;
   color: white;
   font-weight: 300;
-  /* font-style: italic; */
-  font-family: "Italianno", cursive;
-  font-family: "Poppins", sans-serif;
+  font-family: "Gabarito", sans-serif;
   position: relative;
   left: 93px;
 }

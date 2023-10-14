@@ -8,7 +8,6 @@ const ExpCard = ({ post }) => {
   if (isLoading) {
     return <div className="loading">Loading..</div>;
   }
-  console.log(post);
   return (
     <div className="expCard_maincont">
       <div className="expCard_headDesc">{post?.cname} Interview Experience</div>

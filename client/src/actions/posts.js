@@ -5,7 +5,6 @@ import { toast } from 'react-hot-toast';
 export const getPostsCount = () => async(dispatch) => {
     try{
         const {data} = await api.fetchPostsCount();
-        console.log(data);
         dispatch({type : 'POSTS_COUNT', payload : data});
     }   
     catch(error)
@@ -19,7 +18,6 @@ export const getPostsBySearch = (searchQuery) => async(dispatch) => {
         const {data} = await api.fetchPostsBySearch(searchQuery);
 
         dispatch({type : 'FETCH_BY_SEARCH', payload : data});
-        console.log(data);
     }
     catch(error)
     {
@@ -34,7 +32,6 @@ export const getRelatedPosts = (searchQuery) => async(dispatch) => {
 
         dispatch({type : 'RELATED_POSTS', payload : data});
         
-        console.log(data);
     }
     catch(error)
     {
@@ -50,7 +47,6 @@ export const getPostsByBatch = (batch) => async(dispatch) => {
 
         dispatch({type : 'FETCH_BY_BATCH', payload : data});
         dispatch({type : 'END_LOADING'});
-        console.log(data);
     }
     catch(error)
     {
@@ -65,7 +61,6 @@ export const getMyPosts = (creatorId) => async(dispatch) => {
 
         dispatch({type : 'FETCH_MY_POSTS', payload : data});
         dispatch({type : 'END_LOADING'});
-        console.log(data);
     }
     catch(error)
     {
@@ -94,7 +89,6 @@ export const createPost = (post) => async(dispatch) => {
         const {data} = await api.createPost(post);
         toast.success("Interview Experience Submitted 🎉")
         dispatch({type : 'CREATE', payload : data});
-        console.log(data);
     }
     catch(error){
         console.log({message : error.message});

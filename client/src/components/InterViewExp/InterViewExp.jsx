@@ -14,7 +14,6 @@ const InterViewExp = () => {
   const { post, isLoading, relatedPosts } = useSelector((state) => state.posts);
 
   const postFind = post;
-  console.log(postFind);
 
   useEffect(() => {
     dispatch(getInterviewExp(id));
@@ -25,8 +24,6 @@ const InterViewExp = () => {
     dispatch(getRelatedPosts(postFind?.cname));
 
   };
-
-  console.log(relatedPosts);
 
   return (
     <div className="intExp_Grandcontainer">

@@ -36,7 +36,6 @@ const ViewList = () => {
   }, [dispatch, location]);
 
   const { batchPosts, isLoading } = useSelector((state) => state.posts);
-  console.log(batchPosts);
 
   const handleClick = (e) => {
     setSelDepartment(e.target.value);
@@ -46,7 +45,6 @@ const ViewList = () => {
   const updatedPosts = batchPosts.filter(
     (batchPost) => batchPost.department === selDepartment
   );
-  console.log(updatedPosts);
 
   const handleSearch = () => {
     setSortSearch((prevState) => !prevState);
@@ -65,7 +63,6 @@ const ViewList = () => {
   const searchedPosts = batchPosts.filter((batchPost) =>
     searchItem.test(batchPost.cname)
   );
-  console.log(searchedPosts);
 
   return (
     <div className="viewList_Container">

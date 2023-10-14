@@ -7,7 +7,6 @@ export const signin = (formData, navigate) => async(dispatch) => {
     try {
         //login the user
         const response = await api.signIn(formData);
-        console.log(response);
 
         const {result, token} = response.data;
         const data = {result, token};
@@ -64,7 +63,6 @@ export const sendOtp = (formData, navigate) => async(dispatch) => {
     try{
         const response = await api.sendOTP(formData);
 
-        console.log("sendOTP API response", response);
         console.log(response.data.success);
         toast.success("OTP sent successfully")
         if(!response.data.success)

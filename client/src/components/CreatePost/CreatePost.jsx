@@ -41,7 +41,6 @@ const CreatePost = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(postData);
     try {
       await postSchema.validate(postData, { abortEarly: false });
 
