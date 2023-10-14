@@ -42,7 +42,7 @@ const Auth = () => {
       //signin / signup actions dispatch
       if (isSignUp) {
         if (
-          formData.email &&
+          formData.email && formData.email.includes("@") &&
           formData.password &&
           formData.firstName &&
           formData.lastName

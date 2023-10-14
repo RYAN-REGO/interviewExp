@@ -21,7 +21,7 @@ export const signin = async (req, res) => {
         });
     }
 
-    const isPasswordCorrect = await bcrypt.compare(
+        const isPasswordCorrect = await bcrypt.compare(
       password,
       existingUser.password
     );
@@ -34,7 +34,7 @@ export const signin = async (req, res) => {
         message : `Password is incorrect`,
       })
     }
-
+    
     const token = jwt.sign(
       { email: existingUser.email, id: existingUser._id },
       "test",
@@ -62,7 +62,7 @@ export const signup = async (req, res) => {
   try {
     const existingUser = await proUser.findOne({ email });
 
-
+    
     if(existingUser)
     {
       return res.status(400).json({
@@ -71,7 +71,7 @@ export const signup = async (req, res) => {
       })
     }
 
-    const response = await userotp.find({ email }).sort({ createdAt: -1 }).limit(1);
+       const response = await userotp.find({ email }).sort({ createdAt: -1 }).limit(1);
     console.log(response);
     if(response.length === 0)
     {
