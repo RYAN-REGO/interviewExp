@@ -69,7 +69,7 @@
 .auth_subContainer {
   width: 42%;
   height: 95%;
-  border: 1px solid #ff4d00;
+  border: 1px solid grey;
   display: flex;
   flex-direction: column;
   align-items: center;
