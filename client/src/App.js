@@ -31,12 +31,12 @@ const App = () => {
         <Route path='/viewList/:batchNum/:dept' element={<div><Navbar1/><ViewList/><Footer1/></div>}/>
         <Route path='/posts/:id' element={<div><Navbar1/><InterViewExp/></div>}/>
         <Route path='/ShareExperience' element={<div><Navbar1/><CreatePost/><Footer1/></div>}/>
-        <Route path='/viewExp/:id' element={<div><Navbar1/><InterViewExp/></div>}/>
+        {/* <Route path='/viewExp/:id' element={<div><Navbar1/><InterViewExp/></div>}/> */}
         <Route path='/contactMe' element={<div><Navbar1/><ContactMe/></div>}/>
         <Route path='/auth' element={<div><Auth/></div>}/> 
         <Route path='/MyPosts/:creatorName/:creatorId' element={<div><Navbar1/><MyPosts/><Footer1/></div>}/>
         <Route path='/verify-email' element={<VerifyEmail/>}/>
-        <Route path='*' element={<div>404 Not Found</div>} />
+        <Route path='*' element={<div style={{color : 'white'}}>404 Not Found</div>} />
       </Routes>
     </Router>
     </div>
