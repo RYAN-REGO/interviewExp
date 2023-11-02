@@ -102,8 +102,8 @@ const CreatePost = () => {
                   3. Elaborate on each of the rounds
                 </div>
                 <div className="createPost_template_elDesc">
-                  a. kindly mention number of aptitude questions | time provided | difficulty level | shortlisting criteria<br/>
-                  b. kindly mention the questions asked in technical interview | time constraints | follow up questions | project discussion rounds
+                  a. Kindly mention number of aptitude questions | time provided | difficulty level | shortlisting criteria<br/>
+                  b. Kindly mention the questions asked in technical interview | time constraints | follow up questions | project discussion rounds
                 </div>
                 </div>
               </div>
