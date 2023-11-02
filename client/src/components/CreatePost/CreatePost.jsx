@@ -41,6 +41,7 @@ const CreatePost = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(postData);
     try {
       await postSchema.validate(postData, { abortEarly: false });
 
@@ -96,8 +97,14 @@ const CreatePost = () => {
                 </div>
               </div>
               <div className="createPost_template_rndExp">
+                <div className="createPost_template_fullDesc">
                 <div className="createPost_template_heading">
                   3. Elaborate on each of the rounds
+                </div>
+                <div className="createPost_template_elDesc">
+                  a. kindly mention number of aptitude questions | time provided | difficulty level | shortlisting criteria<br/>
+                  b. kindly mention the questions asked in technical interview | time constraints | follow up questions | project discussion rounds
+                </div>
                 </div>
               </div>
               <div className="createPost_template_tip">
@@ -213,7 +220,7 @@ const CreatePost = () => {
           <textarea
             className="createPost_rndDesc"
             cols="8"
-            placeholder="*Kindly elaborate on each of the rounds"
+            placeholder="*Kindly mention number of aptitude questions | time provided | difficulty level | shortlisting criteria "
             value={postData.roundDescription}
             onChange={(e) =>
               setPostData({ ...postData, roundDescription: e.target.value })
